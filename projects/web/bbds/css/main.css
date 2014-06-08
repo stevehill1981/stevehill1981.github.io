@@ -3,5 +3,6 @@
 }
 
 body {
+    background: #fefefe url('../img/paper_fibers.png') repeat;
     font-family: 'Rosario', sans-serif;
 }
