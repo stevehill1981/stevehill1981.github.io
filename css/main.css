@@ -1,1 +1,9 @@
-/* My custom styles can go here shortly */
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 940px;
+  padding: 0 20px;
+}
