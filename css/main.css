@@ -8,3 +8,14 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+
+.projects .tools {
+  list-style: none;
+}
+
+.projects .tools li {
+  display: inline-block;
+  background: #39c;
+  margin-right: 10px;
+  border-radius: 50%;
+}
