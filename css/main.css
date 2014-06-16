@@ -9,6 +9,17 @@ body {
   margin: 0 auto;
 }
 
+.projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects h3 {
+  font-size: 1.2em;
+  letter-spacing: 0.01em;
+}
+
 .projects .tools {
   list-style: none;
   margin: 0;
