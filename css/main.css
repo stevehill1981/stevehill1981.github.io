@@ -17,7 +17,8 @@ body {
   display: inline-block;
   background: #39c;
   margin-right: 10px;
-  border-radius: 50%;
+  border-radius: 0.6em / 0.6em;
   color: #fff;
   padding: 4px 10px;
+  line-height: 1.2em;
 }
