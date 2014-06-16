@@ -17,7 +17,8 @@ body {
 
 .projects h3 {
   font-size: 1.2em;
-  letter-spacing: 0.01em;
+  background: #9cf;
+  line-height: 1.4em;
 }
 
 .projects .tools {
