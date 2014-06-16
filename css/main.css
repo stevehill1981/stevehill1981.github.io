@@ -6,4 +6,5 @@ body {
   box-sizing: border-box;
   max-width: 940px;
   padding: 0 20px;
+  margin: 0 auto;
 }
