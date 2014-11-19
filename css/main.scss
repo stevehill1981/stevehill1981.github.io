@@ -1,0 +1,108 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 940px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects h3 {
+  font-size: 1.2em;
+  background: #9cf;
+  line-height: 1.4em;
+  padding: 4px 10px;
+}
+
+.projects h3 a,
+.projects h3 a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.projects h3 a:hover {
+  text-decoration: underline;
+}
+
+.projects p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.projects .tools {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects .tools li {
+  display: inline-block;
+  background: #39c;
+  margin: 0 0.25em 0 0;
+  border-radius: 1.2em / 1.2em;
+  color: #fff;
+  padding: 4px 10px;
+  line-height: 1.2em;
+  font-size: 0.8em;
+}
