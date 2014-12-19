@@ -22,6 +22,11 @@ layout: default
           <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
         </h3>
         {{ project.excerpt }}
+        <ul class="tools">
+          {% for technology in project.technologies %}
+            <li>{{ technology }}</li>
+          {% endfor %}
+        </ul>
       </li>
     </ul>
   {% endfor %}
