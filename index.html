@@ -13,23 +13,7 @@ layout: default
     In the meantime, you can find me on Twitter (<a href="https://twitter.com/StephenOrr1981">@StephenOrr1981</a>) or GitHub (<a href="https://github.com/stephenorr">stephenorr</a>).
   </p>
 
-  <h2>My Projects</h2>
-
-  {% for project in site.projects %}
-    <ul class="projects">
-      <li>
-        <h3>
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h3>
-        {{ project.excerpt | markdownify }}
-        <ul class="tools">
-          {% for technology in project.technologies %}
-            <li>{{ technology | capitalize }}</li>
-          {% endfor %}
-        </ul>
-      </li>
-    </ul>
-  {% endfor %}
+  {% include projects.md %}  
 
   <h1 class="page-heading">Posts</h1>
 
