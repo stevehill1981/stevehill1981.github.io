@@ -1,8 +1,8 @@
 <aside class="projects">
   <h2>My Projects</h2>
   
-  {% for project in site.projects %}
-    <ul class="projects">
+  <ul class="projects">
+    {% for project in site.projects %}
       <li>
         <h3>
           <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
@@ -14,6 +14,6 @@
           {% endfor %}
         </ul>
       </li>
-    </ul>
-  {% endfor %}
+    {% endfor %}
+  </ul>
 </aside>
