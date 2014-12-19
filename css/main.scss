@@ -107,3 +107,9 @@ body {
   line-height: 1.2em;
   font-size: 0.8em;
 }
+
+aside.projects {
+  min-width: 20em;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
