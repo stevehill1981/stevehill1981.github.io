@@ -21,7 +21,7 @@ layout: default
         <h3>
           <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
         </h3>
-        {{ project.excerpt }}
+        {{ project.excerpt | markdownify }}
         <ul class="tools">
           {% for technology in project.technologies %}
             <li>{{ technology | capitalize }}</li>
@@ -30,47 +30,6 @@ layout: default
       </li>
     </ul>
   {% endfor %}
-  
-  <ul class="projects">
-    <li>
-      <h3><a href="/projects/unity/super_jetroid/">Super Jetroid</a></h3>
-      <p>
-        A simple game, created by following Jesse Freeman's Unity tutorial on Lynda.com. This is the first full tutorial I've seen
-        that produces something that might actually be fun to play for an extended period - although there's only one level here,
-        and the default air supply is so tight I don't believe anyone could complete that :)
-      </p>
-      <p>
-        You can download the <a href="/projects/unity/super_jetroid/SuperJetroid2D_Windows.zip">Windows</a> and <a href="/projects/unity/super_jetroid/SuperJetroid2D_Mac.zip">Mac</a> builds here too, as well as playing the game online with the Unity Web Player.
-      </p>
-      <ul class="tools">
-        <li>C#</li>
-        <li>Unity</li>
-      </ul>
-    </li>
-    <li>
-      <h3><a href="/projects/unity/space_shooter/">Space Shooter</a></h3>
-      <p>
-        The Unity sample project. I was really impressed with how clear the tutorial was, and how powerful the system is in general.
-        I didn't expect lots of dragging and dropping to be a realistic way of building a game, but it seems to work!
-      </p>
-      <ul class="tools">
-        <li>C#</li>
-        <li>Unity</li>
-      </ul>
-    </li>
-    <li>
-      <h3><a href="https://github.com/stephenorr/putty_themer">PuTTY Themer</a></h3>
-      <p>
-        A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions saved in the user's registry.
-        I built this about 3 years ago, and I was pleased to find that it still works under current versions of Windows and Ruby.
-        I haven't been able to find a similar tool that does the job better (do people just not care about this stuff on Windows?),
-        but do please let me know if you do find something.
-      </p>
-      <ul class="tools">
-        <li>Ruby</li>
-      </ul>
-    </li>
-  </ul>
 
   <h1 class="page-heading">Posts</h1>
 
