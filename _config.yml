@@ -12,3 +12,8 @@ github_username:  stephenorr
 
 # Build settings
 markdown: kramdown
+
+# Collections
+collections:
+  projects:
+    output: true
