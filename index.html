@@ -24,7 +24,7 @@ layout: default
         {{ project.excerpt }}
         <ul class="tools">
           {% for technology in project.technologies %}
-            <li>{{ technology }}</li>
+            <li>{{ technology | capitalize }}</li>
           {% endfor %}
         </ul>
       </li>
