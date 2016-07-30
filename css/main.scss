@@ -81,6 +81,8 @@ body {
 
     li {
       list-style: none;
+      width: 33%;
+      float: left;
     }
   }
 
@@ -105,4 +107,9 @@ body {
       font-size: 0.8em;
     }
   }
+}
+
+.rss-subscribe {
+  float: none;
+  clear: both;
 }
