@@ -9,8 +9,11 @@ layout: default
   </p>
 
   <section class="main">
-    {% include projects.md %}  
     {% include posts.md %}
+  </section>
+
+  <section class="projects">
+    {% include projects.md %}
   </section>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
