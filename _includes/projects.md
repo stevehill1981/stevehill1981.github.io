@@ -1,7 +1,7 @@
-<aside class="projects">
+<section class="projects">
   <h2>My Projects</h2>
-  
-  <ul class="projects">
+
+  <ul>
     {% for project in site.projects %}
       <li>
         <h3>
@@ -16,4 +16,4 @@
       </li>
     {% endfor %}
   </ul>
-</aside>
+</section>
