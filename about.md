@@ -1,11 +1,18 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi. I'm Stephen Orr.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I'm currently working as a senior developer for Siftware. We're a small team of
+PHP website and application maintenance experts, focusing on ensuring that the
+investment organisations have made in their systems continue to deliver business
+value.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+When I'm not working with PHP, I'm working with Ruby, or hacking on game ideas,
+or playing games from various eras from the 80s up to modern day. I also enjoy
+reading books, listening to music and I maintain a keen interest in world events
+and history, science fiction, space travel and technology. In short, a little
+bit of everything.
