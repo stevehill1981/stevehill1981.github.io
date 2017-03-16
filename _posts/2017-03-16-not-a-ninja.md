@@ -34,4 +34,7 @@ should be optimised first.
 
 I like to write tests for my code, but I recognise that sometimes getting human
 eyes on a feature is the only way to know for sure that it works as expected. In
-the PHP world, I use PHPUnit; in the Ruby world, I lean on RSpec.
+the PHP world, I use PHPUnit; in the Ruby world, I lean on RSpec. Either way, I
+write tests at multiple levels; from the unit level, testing a single class, to
+the full end-to-end integration test interacting with the application as a user
+would. Where necessary, I'll use PhantomJS or Selenium for this.
