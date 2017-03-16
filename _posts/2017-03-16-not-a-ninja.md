@@ -38,3 +38,6 @@ the PHP world, I use PHPUnit; in the Ruby world, I lean on RSpec. Either way, I
 write tests at multiple levels; from the unit level, testing a single class, to
 the full end-to-end integration test interacting with the application as a user
 would. Where necessary, I'll use PhantomJS or Selenium for this.
+
+The take away from all this? I don't use bleeding edge technology for the sake
+of geeking out; nor should you.
