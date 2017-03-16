@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hi. I'm Stephen Orr.
+Hi. I'm Steve Hill.
 
 I'm currently working as a senior developer for Siftware. We're a small team of
 PHP website and application maintenance experts, focusing on ensuring that the
