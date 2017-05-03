@@ -17,3 +17,6 @@ markdown: kramdown
 collections:
   projects:
     output: true
+  spectrum:
+    output: true
+    
