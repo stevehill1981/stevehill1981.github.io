@@ -238,5 +238,54 @@ being cyan in the middle, and with a black border.
 
 ![cyan screen]({{ site.url }}/assets/img/cyan-centre.png)
 
-I intended that to be cyan completely, so I've obviously done something wrong...
-More later!
+That's not quite right. I wanted the entire screen to be cyan, not just the
+middle bit. So what did we do wrong? The secret is in the third line:
+
+```
+xor a
+```
+
+This sets the accumulator back to zero. Zero means black. That'll be why. Let's
+try it, and see if we're right. Change the `xor 0` line to the following, and
+recompile/reload:
+
+```
+ld a,5           ; Set the colour to cyan (5).
+```
+
+That's better. Now you should have this:
+
+![cyan all over]({{ site.url }}/assets/img/cyan-all-over.png)
+
+That's still not quite what we want though. Unfortunately, unless I'm missing
+something obvious, you can't set the border colour to be a bright shade. Only
+the three least significant bits of the byte are used, which if you know any
+binary means you can only represent 0-7 - just the colours we know, then!
+
+So, I'm compromising. Let's make the centre of the screen NOT bright. Here's
+the modified code:
+
+```
+; This is where your program starts in RAM.
+org 40000
+
+; Clear the screen to black.
+    ld a,46         ; Yellow ink (6), cyan paper (5 * 8), not bright (0).
+    ld (23693),a    ; Set our screen colours.
+    ld a,5           ; Set the colour to cyan (5).
+    call 8859       ; Set permanent border colours.
+    call 3503       ; Clear the screen, open channel 2.
+
+; Pasmo needs this to know where to start running your program from.
+; It should be the same as the address you specified at the top!
+end 40000
+```
+
+And the result:
+
+![perfect cyan]({{ site.url }}/assets/img/cyan-perfect.png)
+
+Yes, that's what we wanted.
+
+More next time. Maybe we'll even print our names... or something equally as
+exciting.
