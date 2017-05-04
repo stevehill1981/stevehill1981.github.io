@@ -2,7 +2,7 @@
 layout: post
 title:  "Revival Solstice 2016 and the ZX Spectrum Next"
 date:   2016-07-30 21:40:00
-categories: games, retrogames, spectrum
+categories: spectrum
 ---
 I just got back from the first of two days at Revival Solstice 2016, an amazing
 retrogaming event. This isn't the first Revival I've been to; they tend to do an
