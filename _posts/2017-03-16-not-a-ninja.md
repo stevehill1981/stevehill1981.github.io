@@ -2,7 +2,7 @@
 layout: post
 title:  "Not a Ninja"
 date:   2017-03-16 08:45:00
-categories: development, php, ruby
+categories: development
 ---
 I'm not a ninja.
 

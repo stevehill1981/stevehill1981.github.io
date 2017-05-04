@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting started with ZX Spectrum Development"
 date:   2017-03-16 08:45:00
-categories: development, retrogames, spectrum
+categories: spectrum
 ---
 Excited by meeting <a href="https://en.wikipedia.org/wiki/Henrique_Olifiers">Henrique Olifiers</a> and <a href="http://www.jimbagley.co.uk/aboutme.html">Jim Bagley</a> at last year's Revival 2016,
 I was all set to start on developing a game for the upcoming <a href="http://www.specnext.com">Spectrum Next</a>.
