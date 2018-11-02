@@ -11,6 +11,8 @@ I've now been a professional web developer for more than eight years, and I had 
 in web technologies for some years before that. In that time, I've spent a substantial amount
 of time looking for something that would make my life easier, to make me more productive.
 
+<!--more-->
+
 This all started when I learned Perl in my first year at university. I'd mostly be using
 basic HTML, CSS and JS until that point - my college courses certainly didn't focus on anything
 more complicated than that.

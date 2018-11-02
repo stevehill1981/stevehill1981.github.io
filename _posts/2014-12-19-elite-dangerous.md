@@ -8,6 +8,8 @@ categories:
 I was an early backer of Elite: Dangerous, although I couldn't afford the steep price demanded
 to play the alpha or beta versions during development.
 
+<!--more-->
+
 I did get access to the gamma version though, a few days prior to release, and now I'm playing
 the final release.
 

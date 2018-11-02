@@ -11,6 +11,8 @@ I'm not a rock star either.
 
 I'm a software developer. That's what makes me tick.
 
+<!--more-->
+
 I enjoy producing elegant solutions for my clients business problems, but I
 recognise that sometimes these solutions do not come in the form of code.
 

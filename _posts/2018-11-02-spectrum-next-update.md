@@ -7,6 +7,8 @@ categories:
 ---
 It's been 18 months since my last post about Spectrum development.
 
+<!--more-->
+
 That's mostly because I'm still waiting for my Spectrum Next to arrive. It's taken a while
 for the team at Next Towers to finalise the hardware - the keyboard in particular has proven
 to be rather challenging - but the problems seem to be behind them, and that should mean that
