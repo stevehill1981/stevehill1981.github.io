@@ -62,6 +62,11 @@ body {
   margin: 0 auto;
 }
 
+p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
 .home {
   display: grid;
   grid-template-columns: 2fr 1fr;
