@@ -2,13 +2,14 @@
 layout: post
 title:  "Getting started with ZX Spectrum Development"
 date:   2017-03-16 08:45:00
-categories: spectrum
+categories:
+- spectrum
 ---
-Excited by meeting <a href="https://en.wikipedia.org/wiki/Henrique_Olifiers">Henrique Olifiers</a> and <a href="http://www.jimbagley.co.uk/aboutme.html">Jim Bagley</a> at last year's Revival 2016,
-I was all set to start on developing a game for the upcoming <a href="http://www.specnext.com">Spectrum Next</a>.
+Excited by meeting [Henrique Olifiers](https://en.wikipedia.org/wiki/Henrique_Olifiers) and [Jim Bagley](http://www.jimbagley.co.uk/aboutme.html) at last year's Revival 2016,
+I was all set to start on developing a game for the upcoming [Spectrum Next](http://www.specnext.com).
 
-It's taken them slightly longer than expected to launch the <a href="https://www.kickstarter.com/projects/1835143999/zx-spectrum-next/">Kickstarter for this
-absolutely stunning looking machine</a>; tweaks to the spec being the main reason
+It's taken them slightly longer than expected to launch the [Kickstarter for this
+absolutely stunning looking machine](https://www.kickstarter.com/projects/1835143999/zx-spectrum-next/); tweaks to the spec being the main reason
 for the delay. The team are super passionate about delivering something that
 really captures the essence of the Spectrum, while bringing it up-to-date with
 new abilities that it could never have had back in the day.
@@ -22,8 +23,8 @@ All this has gotten me excited about Spectrum development again, and so I'm
 looking at setting up a development environment to make it easier for me to do
 so. Bear in mind that I was a kid when I had my Spectrum back in the 80s and
 early 90s, so any programming I did was fairly limited. I barely touched machine
-code, although I did experiment a little with a cool package called <a href="http://www.worldofspectrum.org/infoseekid.cgi?id=0008967">White
-Lightning</a> (not the cider - it was a version of FORTH intended specifically for
+code, although I did experiment a little with a cool package called [White
+Lightning](http://www.worldofspectrum.org/infoseekid.cgi?id=0008967) (not the cider - it was a version of FORTH intended specifically for
 games programming).
 
 I'm working on a Mac, so not all of the information I share here will necessarily
@@ -31,25 +32,25 @@ be relevant to other environments. That said, I expect to mostly be working with
 Z80 Assembly language which _will_ be relevant.
 
 Since I don't yet have my Next, I'll be working in an emulator. I'm told that
-<a href="https://sourceforge.net/projects/zesarux/">ZEsarUX</a> is the best emulator currently available, and it's supposed to be able to
+[ZEsarUX](https://sourceforge.net/projects/zesarux/) is the best emulator currently available, and it's supposed to be able to
 emulate the TBBlue, the forerunner to the Spectrum Next. I'll also need to be
-able to compile my programs, and <a href="https://www.z88dk.org/">Z88DK</a> seems
+able to compile my programs, and [Z88DK](https://www.z88dk.org/) seems
 to be the best solution for that. It's going to take me a while to cobble these
 together, but I'm sure I'll get there in the end :)
 
 My first challenge to myself: be able to get a machine code program running that
-will clear the screen. Sounds simple, right? Well, Paul Land posted a <a href="http://www.speccyvirgins.com/2017/05/blog-post_72.html">very
-useful Spectrum memory map</a> on his website. As I understand it, I should be
+will clear the screen. Sounds simple, right? Well, Paul Land posted a [very
+useful Spectrum memory map](http://www.speccyvirgins.com/2017/05/blog-post_72.html) on his website. As I understand it, I should be
 able to clear the screen by blanking out all the bytes from $4000 (16384) to
 $5AFF. I'll give that a go, and update this post with my progress. And an video
 of it, if I get that far...
 
 I've also found these very good videos by Michael Daley, who recommends a slightly
-different toolset for building Spectrum software... <a href="https://vimeo.com/166935577">part 1 is here</a>,
-and <a href="https://vimeo.com/167876638">part 2 is here</a>. Michael recommends
-using <a href="http://zxsp.blogspot.co.uk/p/about-zxsp.html">ZXSP</a>, and the <a href="http://pasmo.speccy.org">Pasmo assembler</a>. He's also taken the time to explain how to
+different toolset for building Spectrum software... [part 1 is here](https://vimeo.com/166935577),
+and [part 2 is here](https://vimeo.com/167876638). Michael recommends
+using [ZXSP](http://zxsp.blogspot.co.uk/p/about-zxsp.html), and the [Pasmo assembler](http://pasmo.speccy.org). He's also taken the time to explain how to
 set up building your programs from within Sublime Text 3, which I found extremely
-useful. Michael is the author of <a href="https://github.com/mikedaley/SpectREM">SpectREM</a>;
+useful. Michael is the author of [SpectREM](https://github.com/mikedaley/SpectREM);
 I'd assume that means he's moved away from ZXSP since his earlier videos ;)
 
 ## Progress
@@ -83,7 +84,7 @@ documented elsewhere.
 Once you've downloaded and unpacked the `.tgz` file, you'll want to switch into
 the folder you unpacked it into, and run the following commands:
 
-```
+```bash
 ./configure
 make
 ```
@@ -92,7 +93,7 @@ You could also run `make install`; I didn't. If you're like me, you'll want to
 be able to run Pasmo from anywhere, so copy it to `/usr/local/bin` with the
 following command:
 
-```
+```bash
 cp pasmo /usr/local/bin
 ```
 
@@ -123,7 +124,7 @@ extension, to make your life easier later on.
 
 You'll want to add the following code:
 
-```
+```asm
 ; This is where your program starts in RAM.
 org 40000
 
@@ -145,7 +146,7 @@ the folder where you saved it.
 Now, use the following magical invocation to compile that code into a Spectrum
 `.TAP` file:
 
-```
+```bash
 pasmo -1 --tapbas clear-screen.asm clear-screen.tap >> debug.txt
 ```
 
@@ -194,7 +195,7 @@ confirm that).
 The colour we chose earlier was black, with white ink and bright mode set,
 adding up to a total of 71. This is made up as follows:
 
-```
+```z80
 INK (0-7) + PAPER (0-7 * 8) + BRIGHT (0/64)
 ```
 
@@ -211,13 +212,13 @@ The colours are:
 
 So, if we wanted to make the screen cyan with bright yellow ink, we'd go for:
 
-```
+```z80
 INK (6) + PAPER (5 * 8 = 40) + BRIGHT (64) = 110
 ```
 
 Let's try that.
 
-```
+```asm
 ; This is where your program starts in RAM.
 org 40000
 
@@ -241,7 +242,7 @@ being cyan in the middle, and with a black border.
 That's not quite right. I wanted the entire screen to be cyan, not just the
 middle bit. So what did we do wrong? The secret is in the third line:
 
-```
+```asm
 xor a
 ```
 
@@ -249,7 +250,7 @@ This sets the accumulator back to zero. Zero means black. That'll be why. Let's
 try it, and see if we're right. Change the `xor 0` line to the following, and
 recompile/reload:
 
-```
+```asm
 ld a,5           ; Set the colour to cyan (5).
 ```
 
@@ -265,7 +266,7 @@ binary means you can only represent 0-7 - just the colours we know, then!
 So, I'm compromising. Let's make the centre of the screen NOT bright. Here's
 the modified code:
 
-```
+```asm
 ; This is where your program starts in RAM.
 org 40000
 

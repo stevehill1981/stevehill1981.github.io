@@ -18,9 +18,16 @@ markdown: kramdown
 collections:
   projects:
     output: true
+  categories:
+    output: true
+    permalink: /categories/:path/
 
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
+  - scope:
+      path: "_categories"
+    values:
+      layout: "category"
