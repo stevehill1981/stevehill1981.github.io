@@ -3,7 +3,7 @@
     
     <ul>
         {% for category in site.categories %}
-            <a href="{{ category[0] }}">{{ category[0]|capitalize }}</a>
+            <a href="{{ site.url }}/categories/{{ category[0] }}/">{{ category[0]|capitalize }}</a>
         {% endfor %}
     </ul>
 </section>
