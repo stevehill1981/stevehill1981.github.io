@@ -2,7 +2,8 @@
 layout: post
 title:  "Elite: Dangerous"
 date:   2014-12-19 15:45:00
-categories: games
+categories:
+- games
 ---
 I was an early backer of Elite: Dangerous, although I couldn't afford the steep price demanded
 to play the alpha or beta versions during development.

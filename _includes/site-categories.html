@@ -1,9 +1,12 @@
-<section class="site-categories">
-    <h2>Sections</h2>
-    
+<section class="categories">
+    <h2>Categories</h2>
+
     <ul>
         {% for category in site.categories %}
-            <a href="{{ site.url }}/categories/{{ category[0] }}/">{{ category[0]|capitalize }}</a>
+        <li>
+            <a href="{{ category.url | prepend: site.baseurl }}">{{ category.title }}</a>
+        </li>
         {% endfor %}
     </ul>
 </section>
+      
