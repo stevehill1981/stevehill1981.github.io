@@ -5,7 +5,7 @@
     {% for project in site.projects %}
       <li>
         <h3>
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+          <a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
         </h3>
         {{ project.excerpt | markdownify }}
         <ul class="tools">
