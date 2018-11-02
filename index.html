@@ -8,7 +8,10 @@ layout: default
     {% include posts.html %}
   </section>
 
-  {% include projects.html %}
+  <aside class="sidebar">
+    {% include site-description.html %}
+    {% include projects.html %}
+  </aside>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
