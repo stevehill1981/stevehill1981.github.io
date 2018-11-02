@@ -6,9 +6,13 @@ categories:
 - spectrum
 ---
 I just got back from the first of two days at Revival Solstice 2016, an amazing
-retrogaming event. This isn't the first Revival I've been to; they tend to do an
-event at least once each year. I'd heartily recommend attending to any retro
-fans out there, or indeed anyone who enjoys games in general; visit the [Revival website](http://www.revivalretroevents.co.uk) if you're interested, although details of
+retrogaming event.
+
+<!--more-->
+
+This isn't the first Revival I've been to; they tend to do an event at least once
+each year. I'd heartily recommend attending to any retro fans out there, or indeed
+anyone who enjoys games in general; visit the [Revival website](http://www.revivalretroevents.co.uk) if you're interested, although details of
 the next event haven't yet been announced (let's give them chance to finish this
 year's event first).
 

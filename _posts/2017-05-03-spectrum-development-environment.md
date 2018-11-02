@@ -8,6 +8,8 @@ categories:
 Excited by meeting [Henrique Olifiers](https://en.wikipedia.org/wiki/Henrique_Olifiers) and [Jim Bagley](http://www.jimbagley.co.uk/aboutme.html) at last year's Revival 2016,
 I was all set to start on developing a game for the upcoming [Spectrum Next](http://www.specnext.com).
 
+<!--more-->
+
 It's taken them slightly longer than expected to launch the [Kickstarter for this
 absolutely stunning looking machine](https://www.kickstarter.com/projects/1835143999/zx-spectrum-next/); tweaks to the spec being the main reason
 for the delay. The team are super passionate about delivering something that
