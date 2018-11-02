@@ -3,7 +3,7 @@
     
     <ul>
         {% for category in site.categories %}
-            {{ category.name }}
+            {{ category[0] }}
         {% endfor %}
     </ul>
 </section>
