@@ -73,49 +73,6 @@ p {
   gap: 20px;
 }
 
-.projects {
-  h2 {
-    font-size: 1em;
-  }
-
-  h3 {
-    font-size: 0.8em;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-  }
-
-  p {
-    font-size: 0.6em;
-  }
-
-  .tools {
-    list-style: none;
-    margin: 0 0 0.25em 0;
-    padding: 0;
-    clear: both;
-
-    li {
-      display: inline-block;
-      background: #39c;
-      margin: 0 0.25em 0 0;
-      border-radius: 1.2em / 1.2em;
-      color: #fff;
-      padding: 4px 10px;
-      line-height: 1.2em;
-      font-size: 0.8em;
-    }
-  }
-}
-
 .rss-subscribe {
   float: none;
   clear: both;
@@ -125,18 +82,55 @@ p {
   margin-bottom: 1.4em;
 }
 
-.sidebar > section {
-  margin-bottom: 1em;
+.sidebar {
+  & > section {
+    margin-bottom: 1em;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 0.3em;
+  }
+  
+  h3 {
+    font-size: 1em;
+    margin-bottom: 0.3em;
+  }
+  
+  p {
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 1em;
+    }
+  }
 }
 
-.sidebar h2 {
-  font-size: 1.5em;
-}
+.projects {
+  .tools {
+    list-style: none;
+    margin: 0 0 0.25em 0;
+    padding: 0;
+    clear: both;
 
-.sidebar h3 {
-  font-size: 1.2em;
-}
-
-.sidebar p {
-  font-size: 1em;
+    li {
+      display: inline-block;
+      background: #2a7ae2;
+      margin: 0;
+      color: #fff;
+      padding: 4px 8px;
+      line-height: 1.2em;
+      font-size: 0.8em;
+    }
+  }
 }
