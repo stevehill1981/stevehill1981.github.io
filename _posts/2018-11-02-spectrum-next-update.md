@@ -3,7 +3,7 @@ layout: post
 title:  "Spectrum Next Update"
 date:   2018-11-02 16:00:00
 categories:
-- spectrum
+  - spectrum
 ---
 It's been 18 months since my last post about Spectrum development.
 

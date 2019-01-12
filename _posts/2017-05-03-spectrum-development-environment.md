@@ -3,7 +3,7 @@ layout: post
 title:  "Getting started with ZX Spectrum Development"
 date:   2017-03-16 08:45:00
 categories:
-- spectrum
+  - spectrum
 ---
 Excited by meeting [Henrique Olifiers](https://en.wikipedia.org/wiki/Henrique_Olifiers) and [Jim Bagley](http://www.jimbagley.co.uk/aboutme.html) at last year's Revival 2016,
 I was all set to start on developing a game for the upcoming [Spectrum Next](http://www.specnext.com).
@@ -203,14 +203,14 @@ INK (0-7) + PAPER (0-7 * 8) + BRIGHT (0/64)
 
 The colours are:
 
-- 0 = Black
-- 1 = Blue
-- 2 = Red
-- 3 = Magenta
-- 4 = Green
-- 5 = Cyan
-- 6 = Yellow
-- 7 = White
+  - 0 = Black
+  - 1 = Blue
+  - 2 = Red
+  - 3 = Magenta
+  - 4 = Green
+  - 5 = Cyan
+  - 6 = Yellow
+  - 7 = White
 
 So, if we wanted to make the screen cyan with bright yellow ink, we'd go for:
 

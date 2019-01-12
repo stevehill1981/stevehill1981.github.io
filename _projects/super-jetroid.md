@@ -2,8 +2,8 @@
 layout: post
 title:  "Super Jetroid"
 technologies:
-- c#
-- unity
+  - c#
+  - unity
 excerpt: A simple game, created by following Jesse Freeman's Unity tutorial on Lynda.com.
 ---
 A simple game, created by following Jesse Freeman's Unity tutorial on Lynda.com. This
