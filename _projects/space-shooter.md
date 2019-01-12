@@ -2,8 +2,8 @@
 layout: post
 title:  "Space Shooter"
 technologies:
-- c#
-- unity
+  - c#
+  - unity
 excerpt: The Unity sample project.
 ---
 The Unity sample project. I was really impressed with how clear the tutorial was, and how

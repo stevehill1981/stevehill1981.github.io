@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "PuTTY Themer"
-technologies: ruby
+technologies:
+  - ruby
 excerpt: A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions saved in the user's registry. 
 ---
 A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions

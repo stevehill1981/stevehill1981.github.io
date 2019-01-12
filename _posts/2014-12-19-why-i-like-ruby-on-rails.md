@@ -3,9 +3,9 @@ layout: post
 title:  "Why I like Ruby on Rails"
 date:   2014-12-19 15:30:00
 categories:
-- development
+  - development
 tags:
-- ruby
+  - ruby
 ---
 I've now been a professional web developer for more than eight years, and I had an interest
 in web technologies for some years before that. In that time, I've spent a substantial amount
@@ -52,9 +52,9 @@ It's always been a struggle to convince colleagues why they should use Ruby over
 especially when I've been working for a company that so far has only ever used PHP - it leads to
 a lot of circular reasoning:
 
-- Why should I learn Ruby, when we only use PHP?
-- Why should we use Ruby, when all our developers only know PHP?
-- ...and so on.
+  - Why should I learn Ruby, when we only use PHP?
+  - Why should we use Ruby, when all our developers only know PHP?
+  - ...and so on.
 
 Maybe I just need some way to demonstrate why I believe Rails has the power to solve many of our
 business problems, and to do so faster than working with PHP. Maybe I need some sort of flashy
