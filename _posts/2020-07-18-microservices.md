@@ -14,6 +14,8 @@ In theory, this allows your development teams to work independently of each othe
 throughput and delivering more value to your clients and your business. Sure, there's a bit of extra
 operational overhead, but that's ok, right?
 
+<!--more-->
+
 I was only half-joking the other day when I told a colleague that I could measure my seniority as a
 developer by an increase in the number of times my answer to a question was "it depends". This is another
 of those situations.
