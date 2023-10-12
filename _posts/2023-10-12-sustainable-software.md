@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sustainable Software"
-date: 2023-10-12 13:37:00
+date: 2023-10-12 13:37:37
 categories:
   - development
 ---
