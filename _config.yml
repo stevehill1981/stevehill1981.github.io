@@ -1,18 +1,27 @@
 # Site settings
 title: Steve Hill
-email: steve@stevehill.xyz
 description: > # this means to ignore newlines until "baseurl:"
   This is the personal website of Steve Hill.
   
   Here, you'll find occasional blog posts about technology,
   development, games and space travel.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://www.stevehill.xyz" # the base hostname & protocol for your site
+baseurl: ""
+url: "https://www.stevehill.xyz"
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-include-cache
+markdown: kramdown
+paginate: 5
+paginate_path: /page:num/
+author:
+  name: "Steve Hill"
+  bio: "Software engineer. Tinkerer. ZX Spectrum fan. (Really) not a fan of microservices."
+email: steve@stevehill.xyz
 github_username:  stevehill1981
 excerpt_separator: <!--more-->
 
 # Build settings
-markdown: kramdown
+
 
 # Collections
 collections:
