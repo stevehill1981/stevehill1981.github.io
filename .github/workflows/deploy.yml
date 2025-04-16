@@ -38,7 +38,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build Tailwind CSS
         # Use npx to directly execute the installed tailwindcss binary
-        run: npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css --minify
+        # Removed --minify flag for debugging
+        run: npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # Uses .ruby-version and Gemfile automatically
         with:
