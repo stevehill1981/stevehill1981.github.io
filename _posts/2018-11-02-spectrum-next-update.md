@@ -1,9 +1,15 @@
 ---
-layout: post
-title:  "Spectrum Next Update"
-date:   2018-11-02 16:00:00
-categories:
+layout: single
+title: "Spectrum Next Update"
+date: 2018-11-02
+excerpt: "Eighteen months after my last update, I'm still waiting for my Spectrum Next to arrive. Once it does, I'll be diving back into ZX Spectrum development."
+read_time: true
+author_profile: true
+tags:
   - spectrum
+  - zx-spectrum-next
+  - retro
+  - development
 ---
 It's been 18 months since my last post about Spectrum development.
 

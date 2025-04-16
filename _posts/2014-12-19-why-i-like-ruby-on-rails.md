@@ -1,11 +1,15 @@
 ---
-layout: post
-title:  "Why I like Ruby on Rails"
-date:   2014-12-19 15:30:00
-categories:
-  - development
+layout: single
+title: "Why I like Ruby on Rails"
+date: 2014-12-19
+excerpt: "Reflecting on how I discovered Ruby on Rails and why it continues to be my go-to for personal projects."
+read_time: true
+author_profile: true
 tags:
   - ruby
+  - rails
+  - php
+  - frameworks
 ---
 I've now been a professional web developer for more than eight years, and I had an interest
 in web technologies for some years before that. In that time, I've spent a substantial amount

@@ -1,10 +1,16 @@
 ---
-layout: post
+layout: single
 title: "Why Storytelling Matters in Software Engineering"
-date: 2025-04-15 16:17:00
-categories:
-  - development
----
+date: 2025-04-15
+excerpt: "Clean code and clear docs matter. But so does the why — and that’s where storytelling helps teams share, learn, and build better software together."
+read_time: true
+author_profile: true
+tags:
+  - storytelling
+  - engineering-culture
+  - communication
+  - leadership
+--- 
 
 Somewhere along the way, we were told to keep our code clean, our docs concise, and our PRs objective.
 And that’s fine - as far as syntax and semantics go. But when it comes to the *why* behind our work,

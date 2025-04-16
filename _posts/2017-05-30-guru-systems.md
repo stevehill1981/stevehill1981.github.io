@@ -1,10 +1,15 @@
 ---
-layout: post
-title:  "Joining Guru Systems"
-date:   2017-05-30 09:00:00
-categories:
+layout: single
+title: "Joining Guru Systems"
+date: 2017-05-30
+excerpt: "After two years of contracting with Guru Systems via Siftware, I’m joining their team to keep building their platform and expand into new areas."
+read_time: true
+author_profile: true
+tags:
   - work
----
+  - php
+  - career
+---  
 I've spent much of the last two years at Siftware working with [Guru Systems](https://www.gurusystems.com) as my primary client, and I'm happy to announce
 that I'll now be working with them a lot closer; I'm joining their team.
 

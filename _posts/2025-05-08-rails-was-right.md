@@ -1,40 +1,15 @@
 ---
-layout: post
+layout: single
 title: "Rails Was Right"
 date: 2025-05-08
-categories: development
-tags: [ruby-on-rails, webdev, architecture, sustainability]
----
-
-Let’s just say it: **Rails was right**.
-
-While the industry sprinted toward microservices, SPAs, and JavaScript-everywhere,  
-Rails quietly kept delivering real-world apps — fast, clean, and maintainable.  
-It never chased hype. It never tried to be everything. It just kept being good  
-at what it was designed for.
-
-And now, in 2025, a lot of engineers are realising what some of us never forgot:  
-Rails never stopped being a great way to build software that lasts.
-
-<!--more-->
-
----
-
-## Convention over complexity
-
-Rails has always leaned on **convention over configuration**. At first, people  
-laughed — or panicked. “It’s too magical.” “I don’t know where anything is.”  
-But over time, most of us came to realise that Rails wasn’t hiding the details.  
-It was **organising them**.
-
-When I open a Rails app, I know where to find the models. I know where the tests  
-live. I know how routing works, how forms work, how background jobs work.
-
-Compare that to many JS frameworks, where every app is a snowflake and every  
-routing setup feels like it was made in a vacuum. Rails doesn’t waste your time  
-reinventing the wheel. It just gives you a really nice one — pre-aligned and  
-ready to roll.
-
+excerpt: "While the industry chased hype, Rails quietly kept delivering — fast, clean, and maintainable. In 2025, it still feels like coming home."
+read_time: true
+author_profile: true
+tags:
+  - ruby-on-rails
+  - webdev
+  - architecture
+  - sustainability
 ---
 
 ## The full-stack sweet spot

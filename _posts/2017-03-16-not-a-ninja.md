@@ -1,10 +1,16 @@
 ---
-layout: post
-title:  "Not a Ninja"
-date:   2017-03-16 08:45:00
-categories: 
+layout: single
+title: "Not a Ninja"
+date: 2017-03-16
+excerpt: "On choosing proven technologies, writing maintainable code, and avoiding hype like microservices for the sake of it."
+read_time: true
+author_profile: true
+tags:
   - development
----
+  - philosophy
+  - microservices
+  - testing
+---  
 I'm not a ninja.
 
 I'm not a rock star either.

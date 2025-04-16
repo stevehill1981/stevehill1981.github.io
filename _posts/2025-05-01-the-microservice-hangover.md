@@ -1,11 +1,16 @@
-
 ---
-layout: post
+layout: single
 title: "The Microservice Hangover"
 date: 2025-05-01
-categories: development
-tags: [architecture, microservices, devops, lessons-learned]
----
+excerpt: "Microservices were supposed to make our lives easier. For many teams, they made everything harder. This is a story about scale, pain, and learning the hard way."
+read_time: true
+author_profile: true
+tags:
+  - architecture
+  - microservices
+  - devops
+  - lessons-learned
+--- 
 
 Microservices were supposed to save us.
 
