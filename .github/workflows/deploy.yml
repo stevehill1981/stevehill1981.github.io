@@ -39,7 +39,8 @@ jobs:
       - name: Build Tailwind CSS (--help)
         # Use npx --package to bypass local bin linking issues
         # Run --help to see if the executable can be invoked at all
-        run: npx --package=tailwindcss@^4.1.4 tailwindcss --help        
+        # Try running within an explicit shell context
+        run: sh -c "npx --package=tailwindcss@^4.1.4 tailwindcss --help"
     #   - name: Check node_modules/.bin contents
     #     run: ls -l node_modules/.bin
     #   - name: Build Tailwind CSS
