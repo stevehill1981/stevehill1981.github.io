@@ -1,10 +1,16 @@
 ---
-layout: post
+layout: single
 title: "Sustainable Software Architecture in the Real World"
 date: 2025-05-15
-categories: development
-tags: [architecture, sustainability, software-design, devops]
----
+excerpt: "Sustainable architecture isn’t about microservices or hype. It’s about building systems that keep working — for people, for years, without burning out the team."
+read_time: true
+author_profile: true
+tags:
+  - architecture
+  - sustainability
+  - software-design
+  - devops
+--- 
 
 Some code is easy to change. Some systems are easy to reason about.  
 Some teams ship with confidence.

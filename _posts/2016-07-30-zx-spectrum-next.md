@@ -1,10 +1,16 @@
 ---
-layout: post
-title:  "Revival Solstice 2016 and the ZX Spectrum Next"
-date:   2016-07-30 21:40:00
-categories:
+layout: single
+title: "Revival Solstice 2016 and the ZX Spectrum Next"
+date: 2016-07-30
+excerpt: "Reflections from Revival Solstice 2016, featuring talks by legendary developers and a look at the ZX Spectrum Next prototype."
+read_time: true
+author_profile: true
+tags:
   - spectrum
----
+  - zx-spectrum-next
+  - retro
+  - events
+---  
 I just got back from the first of two days at Revival Solstice 2016, an amazing
 retrogaming event.
 

@@ -1,15 +1,20 @@
 ---
-layout: post
-title:  "Super Jetroid"
-technologies:
-  - c#
+layout: single
+title: "Super Jetroid"
+date: 2018-04-01
+excerpt: "A Unity game built from Jesse Freeman’s Lynda.com tutorial. Tight mechanics, a single level, and a brutal air timer — it’s simple, stylish, and unforgiving."
+read_time: false
+author_profile: false
+tags:
   - unity
-excerpt: A simple game, created by following Jesse Freeman's Unity tutorial on Lynda.com.
+  - csharp
+  - game-dev
+  - projects
 ---
-A simple game, created by following Jesse Freeman's Unity tutorial on Lynda.com. This
-is the first full tutorial I've seen that produces something that might actually be
-fun to play for an extended period - although there's only one level here, and the
-default air supply is so tight I don't believe anyone could complete that :)
+Super Jetroid is a simple game created by following Jesse Freeman’s Unity tutorial on Lynda.com.
 
-You can download the Windows and Mac builds here too, as well as playing the game
-online with the Unity Web Player.
+It was the first full tutorial I came across that resulted in something that actually felt *fun* to play. The movement mechanics are satisfyingly tight, and the visual style has a clean retro vibe. That said, the game only features a single level, and the air supply timer is tuned so aggressively I’m not convinced it’s actually possible to beat!
+
+Still, it was a great learning experience — especially around tilemaps, animation, and basic level design in Unity.
+
+You can download the Windows and Mac builds here, or try the game online using the Unity Web Player.

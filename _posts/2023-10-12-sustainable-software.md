@@ -1,9 +1,15 @@
 ---
-layout: post
+layout: single
 title: "Sustainable Software"
-date: 2023-10-12 13:37:37
-categories:
-  - development
+date: 2023-10-12
+excerpt: "Sustainable software development isn’t just about clean code or green energy. It’s about people, pace, and pragmatic decisions that last."
+read_time: true
+author_profile: true
+tags:
+  - sustainability
+  - software-engineering
+  - process
+  - tooling
 ---
 I've been tossing the idea of Sustainable Software back and forth in my mind for over a decade, possibly even
 longer than that.

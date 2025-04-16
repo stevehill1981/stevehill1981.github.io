@@ -1,10 +1,16 @@
 ---
-layout: post
+layout: single
 title: "Microservices, and why they're not always the answer"
-date: 2020-07-18 16:25:00
-categories:
-  - development
----
+date: 2020-07-18
+excerpt: "Microservices were supposed to save us. For most teams, they just moved the pain around — and made everything more complicated in the process."
+read_time: true
+author_profile: true
+tags:
+  - microservices
+  - architecture
+  - devops
+  - lessons-learned
+---  
 Microservices have been fashionable for a while now, and why wouldn't they be?
 
 On the face of it, the concept sounds compelling; your application is complex, so you break it up into

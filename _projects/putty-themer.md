@@ -5,8 +5,8 @@ technologies:
   - ruby
 excerpt: A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions saved in the user's registry. 
 ---
-A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions
-saved in the user's registry. I built this about 3 years ago, and I was pleased to find
-that it still works under current versions of Windows and Ruby. I haven't been able to
-find a similar tool that does the job better (do people just not care about this stuff
-on Windows?), but do please let me know if you do find something.
+A very simple Ruby command-line tool that applies a colour scheme and font to all PuTTY sessions saved in the user's Windows registry.
+
+I originally built this around 2016, and I was pleased to find that it still works reliably under modern versions of both Windows and Ruby. I haven’t yet found a better tool for the job — though I’d love to hear about it if one exists.
+
+If you use PuTTY and you’ve ever been frustrated by the inconsistent appearance of your saved sessions, this might help.

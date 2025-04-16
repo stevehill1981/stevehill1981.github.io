@@ -1,9 +1,15 @@
 ---
-layout: post
-title:  "Lead Developer London 2019"
-date:   2019-06-13 16:45:00
-categories:
+layout: single
+title: "Lead Developer London 2019"
+date: 2019-06-13
+excerpt: "Lead Dev London 2019 brought together 1400+ engineers and leaders for two days of inspiration, practical advice, and community — still my favourite conference."
+read_time: true
+author_profile: true
+tags:
+  - conferences
+  - lead-dev
   - development
+  - leadership
 ---
 On the 11th and 12th of June 2019, I was at Lead Developer London 2019, along with around 1400 other attendees.
 

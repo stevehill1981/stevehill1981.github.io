@@ -1,10 +1,16 @@
 ---
-layout: post
-title:  "Getting started with ZX Spectrum Development"
-date:   2017-03-16 08:45:00
-categories:
+layout: single
+title: "Getting started with ZX Spectrum Development"
+date: 2017-05-03
+excerpt: "Inspired by Revival 2016 and the Spectrum Next Kickstarter, I set out to build a ZX Spectrum dev environment on macOS using Pasmo, Atom, and ZXSP."
+read_time: true
+author_profile: true
+tags:
   - spectrum
----
+  - development
+  - zx-spectrum-next
+  - retro
+---  
 Excited by meeting [Henrique Olifiers](https://en.wikipedia.org/wiki/Henrique_Olifiers) and [Jim Bagley](http://www.jimbagley.co.uk/aboutme.html) at last year's Revival 2016,
 I was all set to start on developing a game for the upcoming [Spectrum Next](http://www.specnext.com).
 

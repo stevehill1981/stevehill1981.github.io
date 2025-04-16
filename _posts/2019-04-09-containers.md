@@ -1,12 +1,16 @@
 ---
-layout: post
-title:  "Containers"
-date:   2019-04-09 10:15:00
-categories:
+layout: single
+title: "Containers"
+date: 2019-04-09
+excerpt: "Containers like Docker transformed how we build and run software — offering reproducibility, isolation, and a path to modern deployments. Here's why I changed my mind."
+read_time: true
+author_profile: true
+tags:
   - docker
   - containers
-  - development
----
+  - devops
+  - tooling
+---  
 By now, most IT professionals will have heard of Docker and containers. They're
 either using containers, or are considering doing so in the future.
 
