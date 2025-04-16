@@ -36,9 +36,11 @@ jobs:
           cache: 'yarn'
       - name: Install Yarn Dependencies
         run: yarn install --frozen-lockfile
+      - name: Check node_modules/.bin contents
+        run: ls -l node_modules/.bin
       - name: Build Tailwind CSS
-        # Reverting to yarn run build:css
-        run: yarn run build:css
+        # Explicitly call the binary from node_modules/.bin
+        run: node_modules/.bin/tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # Uses .ruby-version and Gemfile automatically
         with:
