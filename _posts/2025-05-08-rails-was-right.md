@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Rails Was Right"
 date: 2025-05-08
 excerpt: "While the industry chased hype, Rails quietly kept delivering — fast, clean, and maintainable. In 2025, it still feels like coming home."

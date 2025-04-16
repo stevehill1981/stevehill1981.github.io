@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Why I like Ruby on Rails"
 date: 2014-12-19
 excerpt: "Reflecting on how I discovered Ruby on Rails and why it continues to be my go-to for personal projects."

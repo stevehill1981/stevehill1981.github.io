@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Getting started with ZX Spectrum Development"
 date: 2017-05-03
 excerpt: "Inspired by Revival 2016 and the Spectrum Next Kickstarter, I set out to build a ZX Spectrum dev environment on macOS using Pasmo, Atom, and ZXSP."

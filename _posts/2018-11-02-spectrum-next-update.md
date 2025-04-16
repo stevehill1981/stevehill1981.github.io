@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Spectrum Next Update"
 date: 2018-11-02
 excerpt: "Eighteen months after my last update, I'm still waiting for my Spectrum Next to arrive. Once it does, I'll be diving back into ZX Spectrum development."

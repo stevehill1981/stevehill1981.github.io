@@ -4,15 +4,26 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-paginate-v2
 
-title: Steve Hill's Blog
+title: Steve Hill
 description: Musings on software, sustainability, and side projects.
 url: "https://stevehill.xyz"
 baseurl: ""
-remote_theme: "mmistakes/minimal-mistakes"
 markdown: kramdown
-paginate: 5
-paginate_path: /page:num/
+
+# Pagination v2 settings
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
 author:
   name: "Steve Hill"
   bio: "Software engineer. Tinkerer. ZX Spectrum fan. (Really) not a fan of microservices."
@@ -20,23 +31,14 @@ email: steve@stevehill.xyz
 github_username:  stevehill1981
 excerpt_separator: <!--more-->
 
-# Build settings
-
-
 # Collections
 collections:
   projects:
     output: true
-  categories:
-    output: true
-    permalink: /categories/:path/
+    permalink: /projects/:title/
 
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
-  - scope:
-      path: "_categories"
-    values:
-      layout: "category"

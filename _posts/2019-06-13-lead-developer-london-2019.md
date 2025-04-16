@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Lead Developer London 2019"
 date: 2019-06-13
 excerpt: "Lead Dev London 2019 brought together 1400+ engineers and leaders for two days of inspiration, practical advice, and community — still my favourite conference."

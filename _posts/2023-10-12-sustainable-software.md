@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Sustainable Software"
 date: 2023-10-12
 excerpt: "Sustainable software development isn’t just about clean code or green energy. It’s about people, pace, and pragmatic decisions that last."

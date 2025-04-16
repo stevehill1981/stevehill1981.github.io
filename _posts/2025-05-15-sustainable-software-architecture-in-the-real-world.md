@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Sustainable Software Architecture in the Real World"
 date: 2025-05-15
 excerpt: "Sustainable architecture isn’t about microservices or hype. It’s about building systems that keep working — for people, for years, without burning out the team."

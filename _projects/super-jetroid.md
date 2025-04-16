@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: project
 title: "Super Jetroid"
 date: 2018-04-01
 excerpt: "A Unity game built from Jesse Freeman’s Lynda.com tutorial. Tight mechanics, a single level, and a brutal air timer — it’s simple, stylish, and unforgiving."
@@ -10,6 +10,13 @@ tags:
   - csharp
   - game-dev
   - projects
+technologies:
+  - unity
+  - csharp
+  - 2d
+  - tilemaps
+  - animation
+  - level-design
 ---
 Super Jetroid is a simple game created by following Jesse Freeman’s Unity tutorial on Lynda.com.
 

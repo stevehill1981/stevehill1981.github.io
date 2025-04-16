@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Microservices, and why they're not always the answer"
 date: 2020-07-18
 excerpt: "Microservices were supposed to save us. For most teams, they just moved the pain around — and made everything more complicated in the process."

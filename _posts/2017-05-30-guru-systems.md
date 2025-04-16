@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Joining Guru Systems"
 date: 2017-05-30
 excerpt: "After two years of contracting with Guru Systems via Siftware, I’m joining their team to keep building their platform and expand into new areas."
