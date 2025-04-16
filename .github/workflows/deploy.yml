@@ -36,7 +36,7 @@ jobs:
           cache: 'npm'
       - name: Install NPM Dependencies
         run: npm install
-      - name: Build Tailwind CSS (Debug: Run --help)
+      - name: Build Tailwind CSS (--help)
         # Use npx --package to bypass local bin linking issues
         # Run --help to see if the executable can be invoked at all
         run: npx --package=tailwindcss@^4.1.4 tailwindcss --help        
