@@ -1,11 +1,12 @@
 ---
-layout: single
+layout: post
 title:  "Elite: Dangerous"
 date:   2014-12-19
 excerpt: "Why I'm so excited about Elite: Dangerous"
 read_time: true
 author_profile: true
 tags: [games, elite-dangerous]
+categories: [games, space-sims]
 ---
 I was an early backer of Elite: Dangerous, although I couldn't afford the steep price demanded
 to play the alpha or beta versions during development.

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Revival Solstice 2016 and the ZX Spectrum Next"
 date: 2016-07-30
 excerpt: "Reflections from Revival Solstice 2016, featuring talks by legendary developers and a look at the ZX Spectrum Next prototype."

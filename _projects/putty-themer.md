@@ -1,8 +1,14 @@
 ---
-layout: post
+layout: project
 title:  "PuTTY Themer"
+read_time: false
+author_profile: false
 technologies:
   - ruby
+  - cli
+  - windows
+  - theming
+  - registry
 excerpt: A very simple command-line tool to apply a colour scheme and font to all PuTTY sessions saved in the user's registry. 
 ---
 A very simple Ruby command-line tool that applies a colour scheme and font to all PuTTY sessions saved in the user's Windows registry.

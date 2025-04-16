@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Not a Ninja"
 date: 2017-03-16
 excerpt: "On choosing proven technologies, writing maintainable code, and avoiding hype like microservices for the sake of it."

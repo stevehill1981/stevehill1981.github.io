@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "AI Can Write Code, But It Can’t Understand It"
 date: 2025-05-22
 excerpt: "AI tools like Copilot and ChatGPT can generate code — but they don’t understand it. True engineering still requires human judgment, structure, and care."

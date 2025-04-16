@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Containers"
 date: 2019-04-09
 excerpt: "Containers like Docker transformed how we build and run software — offering reproducibility, isolation, and a path to modern deployments. Here's why I changed my mind."

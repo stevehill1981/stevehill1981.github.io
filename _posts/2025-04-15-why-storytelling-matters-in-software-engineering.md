@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Why Storytelling Matters in Software Engineering"
 date: 2025-04-15
 excerpt: "Clean code and clear docs matter. But so does the why — and that’s where storytelling helps teams share, learn, and build better software together."

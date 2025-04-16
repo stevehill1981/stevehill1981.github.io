@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Sustainable Software in the Age of AI Hype"
 date: 2025-04-22
 excerpt: "AI is changing how we build, but speed isn’t sustainability. If we’re not careful, we’ll automate our way into chaos — faster than ever before."

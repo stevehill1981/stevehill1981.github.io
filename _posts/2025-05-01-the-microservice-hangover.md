@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "The Microservice Hangover"
 date: 2025-05-01
 excerpt: "Microservices were supposed to make our lives easier. For many teams, they made everything harder. This is a story about scale, pain, and learning the hard way."
