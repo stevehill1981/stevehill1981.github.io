@@ -36,10 +36,10 @@ jobs:
           curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
           chmod +x tailwindcss-linux-x64
       - name: Build Tailwind CSS
-        # Run the standalone binary
-        run: ./tailwindcss-linux-x64 -i ./assets/css/tailwind.css -o ./assets/css/output.css --minify # Add minify back
+        # Run the standalone binary with minify for production
+        run: ./tailwindcss-linux-x64 -i ./assets/css/tailwind.css -o ./assets/css/output.css --minify
 
-      # Restore Jekyll build steps
+      # Jekyll build steps
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # Uses .ruby-version and Gemfile automatically
         with:
@@ -58,7 +58,7 @@ jobs:
         with:
           path: './_site'
 
-  # Restore Deployment job
+  # Deployment job
   deploy:
     environment:
       name: github-pages
