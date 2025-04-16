@@ -35,12 +35,10 @@ jobs:
           node-version: "20" # Or your preferred Node.js LTS version
           cache: 'npm' # Switch cache to npm
       - name: Install NPM Dependencies
-        run: npm install --verbose # Switch install command to npm
-      - name: Check node_modules/.bin contents
-        run: ls -l node_modules/.bin
+        run: npm install # Remove verbose for now
       - name: Build Tailwind CSS
-        # Explicitly call the binary from node_modules/.bin
-        run: node_modules/.bin/tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css
+        # Use npx --package to bypass local bin linking issues
+        run: npx --package=tailwindcss@^4.1.4 tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # Uses .ruby-version and Gemfile automatically
         with:
