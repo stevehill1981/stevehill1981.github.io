@@ -1,0 +1,39 @@
+{
+	"name": "Jekyll + Tailwind Site",
+
+	// Use the official Jekyll dev container image
+	"image": "mcr.microsoft.com/devcontainers/jekyll",
+
+	"features": {
+		// Add Homebrew to install Tailwind CLI via Brewfile
+		"ghcr.io/devcontainers/features/homebrew:1": {}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// Installs dependencies from Gemfile and Brewfile using the Makefile target.
+	"postCreateCommand": "make setup",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"rebornix.Ruby", // Ruby language support
+				"redhat.vscode-yaml", // YAML support for config files
+				"bradlc.vscode-tailwindcss" // Tailwind CSS IntelliSense (Optional, but recommended)
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		4000 // Jekyll server default port
+	],
+
+	// Use 'postStartCommand' to run commands after the container starts.
+	// "postStartCommand": "make serve", // Optionally auto-start the server
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+} 
