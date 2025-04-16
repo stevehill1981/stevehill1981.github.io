@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20" # Or your preferred Node.js LTS version
-          cache: 'yarn'
+          # cache: 'yarn' # Disabled cache for debugging
       - name: Install Yarn Dependencies
         run: yarn install --frozen-lockfile
       - name: Check node_modules/.bin contents
