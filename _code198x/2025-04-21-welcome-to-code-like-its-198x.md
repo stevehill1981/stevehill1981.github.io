@@ -167,4 +167,4 @@ I hope you’ll join me.
 
 ---
 
-➡️ Next: [Getting Started with the ZX Spectrum](/code-like-its-198x/spectrum-getting-started/)
+➡️ Next: [Getting Started with the ZX Spectrum](/code-like-its-198x/getting-started-with-zx-spectrum/)

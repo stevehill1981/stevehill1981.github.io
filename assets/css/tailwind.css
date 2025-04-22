@@ -38,3 +38,24 @@ h1, h2, h3, h4, h5, h6 {
 a {
   @apply text-primary hover:underline;
 }
+
+.copy-button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.copy-button:hover {
+  background-color: #005f99;
+}
+
+pre {
+  position: relative;
+}
