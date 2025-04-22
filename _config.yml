@@ -36,6 +36,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:title/
+  code198x:
+    output: true
+    permalink: /code-like-its-198x/:name/
 
 defaults:
   - scope:

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | Code Like It's 198X</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <main class="code198x-post">
+    <article>
+      <h1>{{ page.title }}</h1>
+      <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+      {% if page.system %}
+        <p><strong>Target System:</strong> {{ page.system }}</p>
+      {% endif %}
+      {{ content }}
+    </article>
+
+    {% include code198x_author.html %}
+
+    <footer>
+      <hr>
+      <p><a href="/code198x/">← Back to Code Like It's 198X</a></p>
+    </footer>
+  </main>
+</body>
+</html>
