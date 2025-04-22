@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html>
+---
+layout: wrapper
+---
 
-  {% include head.html %}
-
-  <body class="min-h-screen flex flex-col">
-    <header role="banner" class="flex-shrink-0">
-      {% include header.html %}
-    </header>
-
-    <main role="main" class="flex-grow">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {{ content }}
-      </div>
-    </main>
-
-    <footer role="contentinfo" class="flex-shrink-0">
-      {% include footer.html %}
-    </footer>
-    
-    {% if page.layout == "post" %}
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "{{ page.title | escape }}",
-        "author": {
-          "@type": "Person",
-          "name": "Steve Hill"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Steve Hill",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://stevehill.xyz/assets/images/avatar.png"
-          }
-        },
-        "datePublished": "{{ page.date | date_to_xmlschema }}",
-        "url": "{{ page.url | absolute_url }}",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "{{ page.url | absolute_url }}"
-        }
-      }
-      </script>
-    {% endif %}
-  </body>
-
-</html>
+{{ content }}
