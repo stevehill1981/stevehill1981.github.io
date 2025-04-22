@@ -24,9 +24,9 @@
   },
   "scripts": {
     "start": "eleventy --serve",
-    "build": "npm run css:build && eleventy",
+    "build": "eleventy",
     "watch": "eleventy --watch",
-    "css:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css",
+    "css:build": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css",
     "css:watch": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css --watch",
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
