@@ -1,8 +1,0 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.bundle/
-Gemfile.lock
-.DS_Store
-node_modules/
-assets/css/output.css
