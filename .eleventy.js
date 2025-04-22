@@ -1,8 +1,20 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { DateTime } from "luxon";
+import markdownIt from "markdown-it";
 
 export default function(eleventyConfig) {
+  // Configure Markdown
+  const markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  
+  const markdownLib = markdownIt(markdownItOptions);
+
+  eleventyConfig.setLibrary("md", markdownLib);
+
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -17,19 +29,49 @@ export default function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
   });
 
-  eleventyConfig.addFilter("date", (dateObj, format) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(format);
+  eleventyConfig.addFilter("date", (dateInput, format) => {
+    let dt;
+    if (dateInput instanceof Date) {
+      // It's a JS Date object, convert to Luxon
+      dt = DateTime.fromJSDate(dateInput, { zone: 'utc' });
+    } else if (dateInput instanceof DateTime) {
+      // Already a Luxon DateTime
+      dt = dateInput;
+    } else if (typeof dateInput === 'string') {
+      // It's a string, try parsing it as ISO 8601
+      dt = DateTime.fromISO(dateInput, { zone: 'utc' }); 
+      // Optional: Add fallback for other string formats if needed
+      // if (!dt.isValid) { dt = DateTime.fromSQL(dateInput, { zone: 'utc' }); } 
+    } else {
+      // Log unsupported type
+      console.warn(`Unsupported date type passed to 'date' filter: ${typeof dateInput}`, dateInput);
+      return dateInput; // Return original input or indicate error
+    }
+  
+    if (dt && dt.isValid) {
+      return dt.toFormat(format);
+    } else {
+      console.warn(`Could not format invalid or unparseable date: ${dateInput}`);
+      return 'Invalid Date'; // Or return original input, or empty string
+    }
   });
 
   eleventyConfig.addFilter("limit", (arr, limit) => {
     return arr.slice(0, limit);
   });
 
+  // Add custom filter to clean up empty paragraphs
+  eleventyConfig.addFilter("cleanExcerpt", (content) => {
+    if (!content) return content;
+    return content.replace(/<p>\s*<\/p>/g, '');
+  });
+
   // Add collections
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/blog/**/*.md").sort((a, b) => {
-      return b.date - a.date;
-    });
+    return collection.getFilteredByGlob("src/blog/**/*.md")
+      .sort((a, b) => {
+        return b.date - a.date;
+      });
   });
 
   eleventyConfig.addCollection("projects", function(collection) {
@@ -37,10 +79,14 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("code198x", function(collection) {
-    return collection.getFilteredByGlob("src/code198x/**/*.md").sort((a, b) => {
-      return b.date - a.date;
-    });
+    return collection.getFilteredByGlob("src/code198x/**/*.md")
+      .sort((a, b) => {
+        return b.date - a.date;
+      });
   });
+
+  // Add global data
+  eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
 
   return {
     dir: {
@@ -52,6 +98,6 @@ export default function(eleventyConfig) {
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
+    dataTemplateEngine: "njk"
   };
 } 

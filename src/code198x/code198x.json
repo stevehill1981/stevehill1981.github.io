@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/code198x.njk",
+  "permalink": "/code-like-its-198x/{{ page.fileSlug }}/"
+} 
