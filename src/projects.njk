@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+title: Projects
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Projects</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">A collection of my work, experiments, and contributions to the tech community.</p>
+    </div>
+
+    <div class="space-y-8">
+        {%- for project in collections.projects -%}
+        <div class="group relative bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row">
+            {%- if project.data.featuredImage -%}
+            <div class="md:w-1/3 aspect-w-16 aspect-h-9 md:aspect-none overflow-hidden">
+                <img src="{{ project.data.featuredImage }}" alt="{{ project.data.title }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300" />
+            </div>
+            {%- endif -%}
+            
+            <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                        <a href="{{ project.url }}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{{ project.data.title }}</a>
+                    </h2>
+
+                    {%- if project.data.technologies -%}
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        {%- for tech in project.data.technologies -%}
+                        <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">{{ tech }}</span>
+                        {%- endfor -%}
+                    </div>
+                    {%- endif -%}
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">{{ project.data.description }}</p>
+
+                    {%- if project.data.excerpt -%}
+                    <div class="prose prose-sm dark:prose-invert max-w-none mb-4">{{ project.data.excerpt | cleanExcerpt | safe }}</div>
+                    {%- endif -%}
+                    
+                    {%- if project.data.tags -%}
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {%- for tag in project.data.tags -%}
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">{{ tag }}</span>
+                        {%- endfor -%}
+                    </div>
+                    {%- endif -%}
+                </div>
+
+                {%- if project.data.links -%}
+                <div class="flex gap-3">
+                    {%- for link in project.data.links -%}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">{{ link.text }}</a>
+                    {%- endfor -%}
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+</div> 

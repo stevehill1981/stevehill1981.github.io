@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Steve Hill</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Software developer with a passion for retro computing and modern web development.</p>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">I write about web development, programming techniques, and explore the intersection of vintage computing with modern technology in my "Code Like It's 198x" series.</p>
+        <div class="flex justify-center space-x-4 mt-8">
+            <a href="/about" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">About Me</a>
+            <a href="/blog" class="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-50">Read My Blog</a>
+        </div>
+    </div>
+
+    <section class="p-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Recent Posts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 auto-rows-fr">
+            {%- for post in collections.posts.slice(0, 2) -%}
+            <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-xl font-bold mb-2">
+                    <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">{{ post.data.title }}</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-2">{{ post.date | readableDate }}</p>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">{{ post.data.description }}</p>
+                {%- if post.data.tags -%}
+                <div class="flex flex-wrap gap-2">
+                    {%- for tag in post.data.tags -%}
+                    <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded text-sm">{{ tag }}</span>
+                    {%- endfor -%}
+                </div>
+                {%- endif -%}
+            </article>
+            {%- endfor -%}
+        </div>
+        <div class="mt-8 text-center">
+            <a href="/blog" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">View all posts →</a>
+        </div>
+    </section>
+</div> 
