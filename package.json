@@ -7,6 +7,7 @@
     "@11ty/eleventy-img": "^6.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "axe-core": "^4.10.3",
     "cssesc": "^3.0.0",
     "eleventy-plugin-seo": "^0.5.2",
     "lodash.castarray": "^4.4.0",

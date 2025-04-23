@@ -4,6 +4,7 @@ import eleventyImg from "@11ty/eleventy-img";
 import pluginSeo from "eleventy-plugin-seo";
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
+import { Axe } from "axe-core";
 
 export default function(eleventyConfig) {
   // Configure Markdown
@@ -98,6 +99,22 @@ export default function(eleventyConfig) {
 
   // Add global data
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
+
+  // Add accessibility audit
+  eleventyConfig.on("eleventy.after", async ({ dir, results, runMode }) => {
+    const axe = new Axe();
+    axe.withRules([
+      { id: "color-contrast", enabled: true },
+      { id: "link-name", enabled: true }
+    ]);
+    axe.withTags(["wcag2a", "wcag2aa"]);
+    for (const result of results) {
+      const violations = await axe.analyze(result.content);
+      if (violations.length > 0) {
+        console.warn(`Accessibility issues found in ${result.outputPath}:`, violations);
+      }
+    }
+  });
 
   return {
     dir: {
