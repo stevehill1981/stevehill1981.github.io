@@ -1,6 +1,7 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyImg from "@11ty/eleventy-img";
+import pluginSeo from "eleventy-plugin-seo";
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
 
@@ -20,6 +21,14 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(eleventyImg);
+  eleventyConfig.addPlugin(pluginSeo, {
+    title: "Steve Hill's Blog",
+    description: "A blog about technology, coding, and personal projects.",
+    url: "https://stevehill.xyz",
+    author: "Steve Hill",
+    twitter: "stevehill1981",
+    image: "/assets/images/profile.jpg"
+  });
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
