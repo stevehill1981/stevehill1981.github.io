@@ -4,6 +4,7 @@
   "description": "This repository contains the source code for my personal website and blog, available at [stevehill.xyz](https://stevehill.xyz).",
   "main": "index.js",
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "cssesc": "^3.0.0",

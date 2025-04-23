@@ -1,5 +1,6 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import eleventyImg from "@11ty/eleventy-img";
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
 
@@ -18,6 +19,7 @@ export default function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  eleventyConfig.addPlugin(eleventyImg);
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
