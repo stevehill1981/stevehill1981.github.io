@@ -47,7 +47,7 @@ pagination:
         {%- endif -%}
         
         {%- for page in pagination.pages -%}
-        <a href="{{ pagination.hrefs[forloop.index0] }}" class="px-4 py-2 {% if page.url == pagination.href.current %}bg-blue-600 text-white{% else %}bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600{% endif %} rounded-md transition-colors duration-300">{{ forloop.index }}</a>
+        <a href="{{ pagination.hrefs[loop.index0] }}" class="px-4 py-2 {% if page.url == pagination.href.current %}bg-blue-600 text-white{% else %}bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600{% endif %} rounded-md transition-colors duration-300">Page {{ loop.index }}</a>
         {%- endfor -%}
         
         {%- if pagination.href.next -%}

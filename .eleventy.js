@@ -6,6 +6,8 @@ import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
 import axe from "axe-core";
 import bundle from "@11ty/eleventy-plugin-bundle";
+import { JSDOM } from "jsdom";
+import { Canvas } from 'canvas';
 
 export default function(eleventyConfig) {
   // Configure Markdown
@@ -119,26 +121,55 @@ export default function(eleventyConfig) {
   // Add global data
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
 
-  // Temporarily disable accessibility audit with axe-core due to missing window/document globals in Node.js environment
-  /*
-  eleventyConfig.on("eleventy.after", async ({ dir, results, runMode }) => {
+  // Accessibility audit using axe-core and jsdom
+  eleventyConfig.on('eleventy.after', async ({ results }) => {
+    console.log('[11ty] Running accessibility audit...');
     for (const result of results) {
-      const { violations } = await axe.run(result.content, {
-        rules: {
-          'color-contrast': { enabled: true },
-          'link-name': { enabled: true }
-        },
-        runOnly: {
-          type: 'tag',
-          values: ['wcag2a', 'wcag2aa']
+      try {
+        // Create a new JSDOM instance for each result
+        const dom = new JSDOM(result.content);
+        // Set up global window and document for axe-core
+        global.window = dom.window;
+        global.document = dom.window.document;
+        // Explicitly set the context for axe-core
+        const context = dom.window.document.documentElement;
+        // Run axe-core on the DOM with explicit context
+        const axeResults = await axe.run(context, {
+          runOnly: {
+            type: 'tag',
+            values: ['wcag2a', 'wcag2aa']
+          },
+          rules: {
+            'color-contrast': { enabled: true },
+            'link-name': { enabled: true }
+          }
+        });
+        // Clean up globals to prevent memory leaks
+        delete global.window;
+        delete global.document;
+        if (axeResults.violations.length > 0) {
+          console.warn(`[11ty] Accessibility issues found in ${result.outputPath}:`);
+          axeResults.violations.forEach((violation, index) => {
+            console.warn(`  ${index + 1}. ${violation.id}: ${violation.description}`);
+            console.warn(`     Impact: ${violation.impact}`);
+            console.warn(`     Nodes: ${violation.nodes.length}`);
+          });
         }
-      });
-      if (violations.length > 0) {
-        console.warn(`Accessibility issues found in ${result.outputPath}:`, violations);
+      } catch (error) {
+        console.error(`[11ty] Accessibility audit error for ${result.outputPath}:`, error.message);
       }
     }
+    console.log('[11ty] Accessibility audit completed.');
   });
-  */
+
+  // Setup jsdom with canvas support
+  const jsdom = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
+    beforeParse(window) {
+      window.HTMLCanvasElement.prototype.getContext = function(type) {
+        return new Canvas(100, 100).getContext(type);
+      };
+    }
+  });
 
   return {
     dir: {
