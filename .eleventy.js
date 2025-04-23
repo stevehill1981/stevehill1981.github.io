@@ -53,9 +53,17 @@ export default function(eleventyConfig) {
       dt = dateInput;
     } else if (typeof dateInput === 'string') {
       // It's a string, try parsing it as ISO 8601
-      dt = DateTime.fromISO(dateInput, { zone: 'utc' }); 
-      // Optional: Add fallback for other string formats if needed
-      // if (!dt.isValid) { dt = DateTime.fromSQL(dateInput, { zone: 'utc' }); } 
+      dt = DateTime.fromISO(dateInput, { zone: 'utc' });
+      // Fallback to other formats if ISO fails
+      if (!dt.isValid) {
+        dt = DateTime.fromSQL(dateInput, { zone: 'utc' });
+      }
+      if (!dt.isValid) {
+        dt = DateTime.fromHTTP(dateInput, { zone: 'utc' });
+      }
+      if (!dt.isValid) {
+        dt = DateTime.fromRFC2822(dateInput, { zone: 'utc' });
+      }
     } else {
       // Log unsupported type
       console.warn(`Unsupported date type passed to 'date' filter: ${typeof dateInput}`, dateInput);
