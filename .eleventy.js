@@ -22,16 +22,16 @@ export default function(eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  // Temporarily disable eleventyImageTransformPlugin to avoid build errors with image processing
-  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-  //   // Disable automatic transformation to avoid errors with missing or inaccessible images
-  //   defaultAttributes: {
-  //     loading: 'lazy',
-  //     decoding: 'async'
-  //   },
-  //   // Skip processing if image fetch fails
-  //   skipOnError: true
-  // });
+  // Re-enable eleventyImageTransformPlugin for image optimization
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Set default attributes for images
+    defaultAttributes: {
+      loading: 'lazy',
+      decoding: 'async'
+    },
+    // Skip processing if image fetch fails to prevent build errors
+    skipOnError: true
+  });
   eleventyConfig.addPlugin(pluginSeo, {
     title: "Steve Hill's Blog",
     description: "A blog about technology, coding, and personal projects.",

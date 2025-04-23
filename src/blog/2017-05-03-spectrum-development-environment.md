@@ -185,7 +185,7 @@ you should also be able to load the TAP file there, but I don't have that at the
 moment). Loading the TAP file should automatically execute your program, and
 give you a black screen. Amazing, isn't it?
 
-![black screen]({{ site.url }}/assets/img/all-black.png)
+![black screen](/assets/images/all-black.png)
 
 .... applause ....
 
@@ -245,7 +245,7 @@ end 40000
 Compile that, and load it back into the emulator. You'll end up with the screen
 being cyan in the middle, and with a black border.
 
-![cyan screen]({{ site.url }}/assets/img/cyan-centre.png)
+![cyan screen](/assets/images/cyan-centre.png)
 
 That's not quite right. I wanted the entire screen to be cyan, not just the
 middle bit. So what did we do wrong? The secret is in the third line:
@@ -264,7 +264,7 @@ ld a,5           ; Set the colour to cyan (5).
 
 That's better. Now you should have this:
 
-![cyan all over]({{ site.url }}/assets/img/cyan-all-over.png)
+![cyan all over](/assets/images/cyan-all-over.png)
 
 That's still not quite what we want though. Unfortunately, unless I'm missing
 something obvious, you can't set the border colour to be a bright shade. Only
@@ -292,7 +292,7 @@ end 40000
 
 And the result:
 
-![perfect cyan]({{ site.url }}/assets/img/cyan-perfect.png)
+![perfect cyan](/assets/images/cyan-perfect.png)
 
 Yes, that's what we wanted.
 
