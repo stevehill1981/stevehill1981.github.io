@@ -5,6 +5,7 @@ import pluginSeo from "eleventy-plugin-seo";
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
 import { Axe } from "axe-core";
+import bundle from "@11ty/eleventy-plugin-bundle";
 
 export default function(eleventyConfig) {
   // Configure Markdown
@@ -30,6 +31,7 @@ export default function(eleventyConfig) {
     twitter: "stevehill1981",
     image: "/assets/images/profile.jpg"
   });
+  eleventyConfig.addPlugin(bundle);
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
