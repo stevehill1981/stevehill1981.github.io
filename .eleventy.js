@@ -54,6 +54,18 @@ export default function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
   });
 
+  eleventyConfig.addFilter("filterBySeries", (posts, seriesName) => {
+    return posts.filter(post => post.data.series === seriesName);
+  });
+
+  eleventyConfig.addFilter("sortByDate", (posts) => {
+    return posts.sort((a, b) => a.date - b.date);
+  });
+
+  eleventyConfig.addFilter("getIndex", (posts, url) => {
+    return posts.findIndex(post => post.url === url);
+  });
+
   eleventyConfig.addFilter("date", (dateInput, format) => {
     let dt;
     if (dateInput instanceof Date) {

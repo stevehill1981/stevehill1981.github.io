@@ -36,6 +36,34 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
+  <div class="mt-8 border-t border-gray-200 pt-6">
+    <h2 class="text-xl font-bold mb-4">More in this series</h2>
+    <div class="flex justify-between">
+      {% set seriesPosts = collections.code198x | sortByDate %}
+      {% set currentIndex = seriesPosts | getIndex(page.url) %}
+      
+      {% if currentIndex > 0 %}
+        {% set prevPost = seriesPosts[currentIndex - 1] %}
+        <div class="w-1/2 pr-2">
+          <p class="text-sm text-gray-500 mb-1">&larr; Previous</p>
+          <a href="{{ prevPost.url }}" class="block text-blue-600 hover:text-blue-800 font-medium">{{ prevPost.data.title }}</a>
+        </div>
+      {% else %}
+        <div class="w-1/2 pr-2"></div>
+      {% endif %}
+      
+      {% if currentIndex < seriesPosts.length - 1 %}
+        {% set nextPost = seriesPosts[currentIndex + 1] %}
+        <div class="w-1/2 pl-2 text-right">
+          <p class="text-sm text-gray-500 mb-1">Next &rarr;</p>
+          <a href="{{ nextPost.url }}" class="block text-blue-600 hover:text-blue-800 font-medium">{{ nextPost.data.title }}</a>
+        </div>
+      {% else %}
+        <div class="w-1/2 pl-2"></div>
+      {% endif %}
+    </div>
+  </div>
+
   <footer class="mt-12 pt-8 border-t border-gray-200">
     <div class="mb-8">
       <h3 class="text-xl font-semibold mb-4">Share this post</h3>
